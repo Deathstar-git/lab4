@@ -34,7 +34,7 @@ def learn():
     elif i == 12 and ans == "1/2a ln|(x-a)/(x+a)| + C":
         print("Nice)0)")
     else:
-        print("fiasko(9(")
+        print("eto fiasko, bratan(9(")
 
 
 learn()
