@@ -1,8 +1,12 @@
 from random import randint
 
 
-def test_1():
-    assert bubble_sort([5, 3, 56, 34]) == [3, 5, 34, 56]
+def test_sort():
+    assert bubble_sort([]) == []
+    assert bubble_sort([12]) == [12]
+    assert bubble_sort([56, 56]) == [56, 56]
+    assert bubble_sort([17, 25, -67, 74, -89]) == [-89, -67, 17, 25, 74]
+    assert bubble_sort([56, 9, 48, 99, 13, 67]) == [9, 13, 48, 56, 67, 99]
 
 
 def main():
@@ -10,9 +14,7 @@ def main():
     N = input("Введите длину списка для сортировки:")
     try:
         Val = int(N)
-    except TypeError:
-        print("Введено неверное значение!")
-    except ValueError:
+    except (TypeError, ValueError):
         print("Введено неверное значение!")
     else:
         N = Val
@@ -42,6 +44,4 @@ def bubble_sort(a):
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
     main()
